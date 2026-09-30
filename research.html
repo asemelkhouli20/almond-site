@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Almond's bilingual intelligence platform mapping Saudi Arabia's corporate social responsibility ecosystem.">
+  <meta name="theme-color" content="#071a17">
+  <title>Saudi CSR Atlas — Almond</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23071a17'/%3E%3Cpath d='M32 11C20 18 14 29 17 40c3 11 16 16 26 9 10-8 7-27-11-38Z' fill='%23c8ff55'/%3E%3Cpath d='M31 19c-5 9-7 18-5 27' fill='none' stroke='%23071a17' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside style="position:relative;z-index:150;background:#e7ef92;color:#4c30a5;padding:20px 5vw;font:14px/1.6 sans-serif"><a href="index.html" style="font-weight:bold">← Almond CSR services / خدمات ألموند</a><br>Research archive from the supplied brief. These are not Almond projects. Source links and claims require editorial verification before external use.<br>أرشيف بحثي من المحتوى المقدم، وليس مشاريع نفذتها ألموند. يلزم تدقيق المصادر والادعاءات قبل الاستخدام الخارجي.</aside>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="progress" aria-hidden="true"><span></span></div>
+  <header class="nav-shell">
+    <a class="brand" href="#top" aria-label="Almond home">
+      <span class="brand-mark"><i></i></span>
+      <span>almond<span class="brand-dot">.</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#atlas" data-i18n="navAtlas">Atlas</a>
+      <a href="#cases" data-i18n="navCases">Case studies</a>
+      <a href="#models" data-i18n="navModels">Operating models</a>
+      <a href="#ecosystem" data-i18n="navEcosystem">Ecosystem</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="lang-switch" type="button" aria-label="Switch language"><span class="lang-active">EN</span><span>ع</span></button>
+      <button class="menu-toggle" type="button" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-grid"></div>
+      <div class="hero-orbit orbit-a"></div><div class="hero-orbit orbit-b"></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal" data-i18n="heroEyebrow">ALMOND INTELLIGENCE / SAUDI ARABIA</p>
+        <h1 class="hero-title"><span class="line"><span data-i18n="heroLine1">Good intentions.</span></span><span class="line acid"><span data-i18n="heroLine2">Mapped impact.</span></span></h1>
+        <p class="hero-intro reveal" data-i18n="heroIntro">A living research atlas of Saudi Arabia's corporate social responsibility ecosystem — from philanthropy to purpose-led innovation.</p>
+        <div class="hero-actions reveal">
+          <a class="button primary" href="#atlas"><span data-i18n="explore">Explore the atlas</span><b>↘</b></a>
+          <button class="button text-button" id="methodBtn" type="button"><span data-i18n="methodology">Read methodology</span><b>+</b></button>
+        </div>
+      </div>
+      <div class="hero-stats" aria-label="Research statistics">
+        <article><strong data-count="50">0</strong><span data-i18n="statInitiatives">verified initiatives</span></article>
+        <article><strong data-count="2264">0</strong><span data-i18n="statCompanies">registered companies</span></article>
+        <article><strong><i data-count="8">0</i></strong><span data-i18n="statModels">operating models</span></article>
+        <article><strong><i data-count="5">0</i>B+</strong><span data-i18n="statValue">SAR documented value</span></article>
+      </div>
+      <div class="scroll-cue"><span data-i18n="scroll">SCROLL TO EXPLORE</span><i></i></div>
+    </section>
+
+    <section class="statement section-pad">
+      <p class="section-index">01 / 05</p>
+      <div class="statement-copy">
+        <p class="kicker" data-i18n="statementKicker">THE REAL PICTURE</p>
+        <h2 data-i18n="statementTitle">Saudi CSR is not one market. It is two worlds moving closer together.</h2>
+        <div class="worlds">
+          <article><span>01</span><h3 data-i18n="world1Title">Corporate CSR & ESG</h3><p data-i18n="world1Text">Long-term programs, partnerships and measurable social outcomes.</p></article>
+          <div class="world-link"><i></i><span data-i18n="overlap">THE OVERLAP IS THE OPPORTUNITY</span><i></i></div>
+          <article><span>02</span><h3 data-i18n="world2Title">Purpose-driven marketing</h3><p data-i18n="world2Text">Public-facing campaigns that turn social issues into participation and cultural change.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="atlas section-pad" id="atlas">
+      <div class="section-head">
+        <div><p class="section-index">02 / 05</p><p class="kicker" data-i18n="atlasKicker">THE RESEARCH UNIVERSE</p><h2 data-i18n="atlasTitle">50 documented initiatives.<br>One explorable atlas.</h2></div>
+        <p class="section-note" data-i18n="atlasNote">Search by company, initiative or operator. Filter by the model of impact.</p>
+      </div>
+      <div class="atlas-controls">
+        <label class="search-box"><span>⌕</span><input id="searchInput" type="search" data-i18n-placeholder="search" placeholder="Search company, initiative or operator…"><kbd>⌘ K</kbd></label>
+        <div class="filters" id="filters" role="group" aria-label="Filter initiatives"></div>
+      </div>
+      <div class="atlas-meta"><span id="resultCount"></span><button id="clearFilters" type="button" data-i18n="clear">Clear filters</button></div>
+      <div class="initiative-grid" id="initiativeGrid"></div>
+      <button class="load-more" id="loadMore" type="button"><span data-i18n="loadMore">Load more initiatives</span><b>↓</b></button>
+    </section>
+
+    <section class="cases" id="cases">
+      <div class="cases-intro section-pad">
+        <p class="section-index light">03 / 05</p><p class="kicker light" data-i18n="casesKicker">SIGNAL, NOT NOISE</p>
+        <h2 data-i18n="casesTitle">Five cases that changed the shape of impact.</h2>
+        <p data-i18n="casesIntro">Selected for strategic depth, measurable outcomes and a model others can learn from.</p>
+      </div>
+      <div class="case-track-wrap"><div class="case-track" id="caseTrack"></div></div>
+      <div class="case-nav section-pad"><span id="caseIndex">01 / 05</span><div><button id="casePrev" aria-label="Previous case">←</button><button id="caseNext" aria-label="Next case">→</button></div></div>
+    </section>
+
+    <section class="models section-pad" id="models">
+      <div class="section-head"><div><p class="section-index">04 / 05</p><p class="kicker" data-i18n="modelsKicker">EIGHT WAYS IMPACT HAPPENS</p><h2 data-i18n="modelsTitle">The Saudi CSR operating model.</h2></div><p class="section-note" data-i18n="modelsNote">The strongest programs connect a social need, an organizational capability and a credible implementation partner.</p></div>
+      <div class="model-list" id="modelList"></div>
+    </section>
+
+    <section class="ecosystem section-pad" id="ecosystem">
+      <div class="ecosystem-copy"><p class="section-index light">05 / 05</p><p class="kicker light" data-i18n="ecoKicker">WHO MAKES IT HAPPEN</p><h2 data-i18n="ecoTitle">A network, not a vendor list.</h2><p data-i18n="ecoText">Saudi CSR is delivered by creative agencies, government platforms, nonprofits, hospitals, universities and volunteer networks. The operator depends on the impact model.</p></div>
+      <div class="operator-cloud" id="operatorCloud" aria-label="Implementation partners"></div>
+    </section>
+
+    <section class="closing section-pad">
+      <p class="kicker" data-i18n="closingKicker">ALMOND / IMPACT INTELLIGENCE</p>
+      <h2 data-i18n="closingTitle">The next meaningful campaign starts with understanding the system.</h2>
+      <a class="button primary dark" href="index.html#contact"><span data-i18n="talk">Start a conversation</span><b>↗</b></a>
+      <div class="closing-orb"></div>
+    </section>
+  </main>
+
+  <footer><a class="brand footer-brand" href="#top"><span class="brand-mark"><i></i></span><span>almond<span class="brand-dot">.</span></span></a><p data-i18n="footerText">Saudi CSR Atlas · Research edition 2026</p><a href="#top" data-i18n="backTop">Back to top ↑</a></footer>
+
+  <div class="modal" id="detailModal" aria-hidden="true" role="dialog" aria-modal="true"><div class="modal-backdrop" data-close-modal></div><article class="modal-card"><button class="modal-close" data-close-modal aria-label="Close">×</button><div id="modalContent"></div></article></div>
+  <div class="modal" id="methodModal" aria-hidden="true" role="dialog" aria-modal="true"><div class="modal-backdrop" data-close-method></div><article class="modal-card method-card"><button class="modal-close" data-close-method aria-label="Close">×</button><p class="kicker" data-i18n="methodKicker">RESEARCH METHOD</p><h2 data-i18n="methodTitle">Verified, attributed, and honest about its limits.</h2><p data-i18n="methodText1">This atlas is a curated research universe of publicly documented Saudi CSR initiatives. It does not claim to contain every CSR activity ever conducted in the Kingdom.</p><p data-i18n="methodText2">Initiatives are included when supported by official company reporting, government sources, Saudi Exchange filings, award databases or documented campaign case studies. Agency attribution appears only when explicitly credited.</p><div class="method-tags"><span data-i18n="verified">Verified sources</span><span data-i18n="attributed">Clear attribution</span><span data-i18n="updated">2026 research</span></div></article></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
