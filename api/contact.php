@@ -46,6 +46,12 @@ $body = curl_exec($curl);
 $status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 curl_close($curl);
 $result = is_string($body) ? json_decode($body, true) : null;
+if (is_array($result)) {
+    error_log(
+        '[Almond Contact] Apps Script result code: ' .
+        substr((string)($result['code'] ?? 'none'), 0, 80)
+    );
+}
 if ($status !== 200 || !is_array($result)) respond(502, ['ok' => false, 'code' => 'upstream']);
 if (($result['ok'] ?? null) !== true || ($result['saved'] ?? null) !== true) {
     $code = $result['code'] ?? '';
