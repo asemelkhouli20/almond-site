@@ -30,7 +30,20 @@ foreach ($limits as $field => [$min, $max]) {
 if (!preg_match('/^[^\s@]+@[^\s@]+\.[^\s@]+$/u', $data['email']) || !preg_match('/^[+()\d\s.-]{7,40}$/', $data['phone'])) respond(422, ['ok' => false, 'code' => 'validation']);
 $url = getenv('ALMOND_APPS_SCRIPT_URL') ?: '';
 $token = getenv('ALMOND_CONTACT_RELAY_TOKEN') ?: '';
-if (!preg_match('~^https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec$~D', $url) || !$token || !function_exists('curl_init')) respond(503, ['ok' => false, 'code' => 'configuration']);
+if (!preg_match('~^https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec$~D', $url)) {
+    error_log('[Almond Contact] Configuration: Invalid Apps Script URL');
+    respond(503, ['ok' => false, 'code' => 'configuration']);
+}
+
+if (!$token) {
+    error_log('[Almond Contact] Configuration: Missing relay token');
+    respond(503, ['ok' => false, 'code' => 'configuration']);
+}
+
+if (!function_exists('curl_init')) {
+    error_log('[Almond Contact] Configuration: Missing PHP cURL');
+    respond(503, ['ok' => false, 'code' => 'configuration']);
+}
 $data['relay_token'] = $token;
 $data['_gotcha'] = '';
 $curl = curl_init($url);
@@ -57,4 +70,5 @@ if (($result['ok'] ?? null) !== true || ($result['saved'] ?? null) !== true) {
     $code = $result['code'] ?? '';
     respond(in_array($code, ['validation', 'spam'], true) ? 422 : 502, ['ok' => false, 'code' => 'upstream_rejected']);
 }
+
 respond(200, ['ok' => true, 'saved' => true]);
